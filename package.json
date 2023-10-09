@@ -1,11 +1,15 @@
 {
-  "name": "2da_preentrega",
+  "name": "3ra_preentrega",
   "version": "1.0.0",
-  "description": "Repositorio para la segunda pre entrega de desarrollo web",
+  "description": "Repositorio para la tercera pre entrega de desarrollo web",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC"
+  "author": "RMS",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.69.0"
+  },
+  "devDependencies": {}
 }
