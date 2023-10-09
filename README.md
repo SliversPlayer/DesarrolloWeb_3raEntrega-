@@ -1,2 +1,2 @@
-# DesarrolloWeb_2daEntrega
-Repositorio para la segunda pre entrega de desarrollo web
+# DesarrolloWeb_3raEntrega
+Implementación de SASS y SEO. Ademas de paginas finales del sitio.
