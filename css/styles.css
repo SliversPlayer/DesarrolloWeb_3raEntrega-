@@ -44,7 +44,16 @@ body {
 article {
   flex: 1;
   position: relative;
-  margin-top: 64px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+article .row .col-xl-6 {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+article .row .col-xl-6 p {
+  text-align: justify;
 }
 
 footer {
