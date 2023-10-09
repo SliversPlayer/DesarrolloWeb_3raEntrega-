@@ -54,6 +54,10 @@ article .row .col-xl-6 {
 }
 article .row .col-xl-6 p {
   text-align: justify;
+  margin-bottom: 32px;
+}
+article h1 {
+  margin-bottom: 20px;
 }
 
 footer {
