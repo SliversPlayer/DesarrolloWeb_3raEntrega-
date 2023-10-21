@@ -1,31 +1,37 @@
-/*Variables*/
+/*Partials*/
+@import "colors.scss";
 
-$patagon-blue: #143d8f;
-$hover-blue: #1a50bc;
-$nav-grey: #f8f9fa;
+/*Mixins*/
+@mixin colorFondo{
+    background-color: map-get($colores,patagon-blue);
+}
+@mixin colorTexto{
+    color: map-get($colores,text-color);
+}
+@mixin transitionTime{
+    transition: 1s;
+}
 
 html {
     color-scheme: light;
     scroll-behavior: smooth;
-}
-
-html, body {
     overflow-y: auto;
     overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    min-height: 100vh;
 }
 
-body{
+body {
+    @extend html;
+    @include colorTexto;
     position:relative;
-    min-height: 100vh;
-    text-rendering: optimizeLegibility;
 }
 
 .d-block {
-  
     &:hover {
         cursor: pointer;
         transform: scale3d(1.2, 1.2, 2);
-        transition: 1s;
+        @include transitionTime;
 }
 }
 
@@ -33,18 +39,20 @@ body{
     &:hover {
         transform: scale3d(.95, .95, 1);
         box-shadow: 0 0 0 2px;
-        transition: 1s;
+        @include transitionTime;
       }
 }
+
+
 
 .btn-primary {
-    background-color: $patagon-blue;
-    border-color: $patagon-blue;
+    @extend .btn;
+    @include colorFondo;
+    border-color: map-get($colores,patagon-blue);
     &:hover {
-        background-color: $hover-blue;
-
-      }
-}
+        border-color: map-get($colores,hover-blue);
+    }
+  }
 
 .containter-sm {
     width: 100%;
@@ -77,8 +85,9 @@ footer {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    background-color: $nav-grey;
+    background-color: map-get($colores,nav-grey);
 }
+
 @media (min-width: 992px) {
     /* Modificación, centrado del navbar*/
         .navbar-expand-lg .navbar-collapse {

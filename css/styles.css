@@ -1,19 +1,24 @@
 @charset "UTF-8";
-/*Variables*/
-html {
+/*Partials*/
+/*
+$patagon-blue: #143d8f;
+$hover-blue: #1a50bc;
+$nav-grey: #f8f9fa;
+$text-color:#333333;
+*/
+/*Mixins*/
+html, body {
   color-scheme: light;
   scroll-behavior: smooth;
-}
-
-html, body {
   overflow-y: auto;
   overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  min-height: 100vh;
 }
 
 body {
+  color: #333333;
   position: relative;
-  min-height: 100vh;
-  text-rendering: optimizeLegibility;
 }
 
 .d-block:hover {
@@ -22,7 +27,7 @@ body {
   transition: 1s;
 }
 
-.btn:hover {
+.btn:hover, .btn-primary:hover {
   transform: scale3d(0.95, 0.95, 1);
   box-shadow: 0 0 0 2px;
   transition: 1s;
@@ -33,7 +38,7 @@ body {
   border-color: #143d8f;
 }
 .btn-primary:hover {
-  background-color: #1a50bc;
+  border-color: #1a50bc;
 }
 
 .containter-sm {
